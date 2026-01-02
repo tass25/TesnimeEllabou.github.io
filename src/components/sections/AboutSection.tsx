@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Brain, Heart, Users, Lightbulb } from "lucide-react";
 import { InteractiveNode } from "../InteractiveNode";
-import profileImage from "../IMG_9977.JPG";
 
 export const AboutSection = () => {
   const traits = [
@@ -98,7 +97,7 @@ export const AboutSection = () => {
                   <div className="text-center p-8">
                     <div className="w-32 h-32 mx-auto rounded-full bg-gradient-primary flex items-center justify-center mb-4">
                       <img
-                        src={profileImage}
+                        src={require("../IMG_9977.JPG")}
                         alt="Tesnime Ellabou"
                         className="w-full h-full object-cover rounded-full"
                       />
