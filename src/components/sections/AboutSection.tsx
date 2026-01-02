@@ -79,7 +79,7 @@ export const AboutSection = () => {
             </div>
           </InteractiveNode>
 
-          {/* Portrait placeholder */}
+          {/* Portrait */}
           <motion.div
             className="relative"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -97,7 +97,7 @@ export const AboutSection = () => {
                   <div className="text-center p-8">
                     <div className="w-32 h-32 mx-auto rounded-full bg-gradient-primary flex items-center justify-center mb-4">
                       <img
-                        src={require("../IMG_9977.JPG")}
+                        src="/portrait.JPG"
                         alt="Tesnime Ellabou"
                         className="w-full h-full object-cover rounded-full"
                       />
