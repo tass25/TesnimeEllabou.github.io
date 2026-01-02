@@ -1,25 +1,43 @@
-import { motion } from 'framer-motion';
-import { Brain, Heart, Users, Lightbulb } from 'lucide-react';
-import { InteractiveNode } from '../InteractiveNode';
+import { motion } from "framer-motion";
+import { Brain, Heart, Users, Lightbulb } from "lucide-react";
+import { InteractiveNode } from "../InteractiveNode";
 
 export const AboutSection = () => {
   const traits = [
-    { icon: Brain, label: 'Curiosity-Driven', description: 'Always exploring new frontiers in AI' },
-    { icon: Lightbulb, label: 'Problem Solver', description: 'Transforming complex challenges into solutions' },
-    { icon: Users, label: 'Mentor & Leader', description: 'Empowering the next generation of AI practitioners' },
-    { icon: Heart, label: 'Impact-Focused', description: 'Building systems that make a difference' },
+    {
+      icon: Brain,
+      label: "Curiosity-Driven",
+      description: "Always exploring new frontiers in AI",
+    },
+    {
+      icon: Lightbulb,
+      label: "Problem Solver",
+      description: "Transforming complex challenges into solutions",
+    },
+    {
+      icon: Users,
+      label: "Mentor & Leader",
+      description: "Empowering the next generation of AI practitioners",
+    },
+    {
+      icon: Heart,
+      label: "Impact-Focused",
+      description: "Building systems that make a difference",
+    },
   ];
 
   const textLines = [
-    "I'm an AI & Data Science enthusiast with an insatiable curiosity",
-    "for understanding how machines learn and reason.",
+    "Hey, I'm Tesnime Ellabou 👋",
+    "I mix curiosity, code, and creativity to turn wild ideas into AI-powered reality.",
     "",
-    "From adversarial robustness to explainable AI,",
-    "I explore the edges of what's possible—",
-    "then build systems that push those boundaries further.",
+    "I tinker with deep learning, break it (sometimes),",
+    "and then rebuild it smarter—think adversarial attacks, explainable AI, and cutting-edge projects 🚀.",
     "",
-    "As a mentor and workshop facilitator,",
-    "I believe in sharing knowledge to amplify impact."
+    "Beyond the code, I mentor, lead workshops, and spark curiosity 🎓,",
+    "because sharing knowledge is how we make AI human-friendly.",
+    "",
+    "This is more than a portfolio—it's my playground, lab, and launchpad.",
+    "Dive in, explore my experiments, and see why my CV is just the tip of the iceberg ✨",
   ];
 
   return (
@@ -31,8 +49,12 @@ export const AboutSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-mono text-sm tracking-wider uppercase">// Identity Node</span>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mt-2 mb-4">About Me</h2>
+          <span className="text-primary font-mono text-sm tracking-wider uppercase">
+            // Identity Node
+          </span>
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mt-2 mb-4">
+            About Me
+          </h2>
           <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full" />
         </motion.div>
 
@@ -43,7 +65,9 @@ export const AboutSection = () => {
               {textLines.map((line, i) => (
                 <motion.p
                   key={i}
-                  className={`text-lg ${line === '' ? 'h-4' : 'text-foreground/90'}`}
+                  className={`text-lg ${
+                    line === "" ? "h-4" : "text-foreground/90"
+                  }`}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -66,16 +90,21 @@ export const AboutSection = () => {
             <div className="relative aspect-square max-w-md mx-auto">
               {/* Glow effect */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-primary opacity-20 blur-2xl" />
-              
+
               {/* Portrait frame */}
               <div className="relative rounded-3xl overflow-hidden border-2 border-primary/30 bg-card">
                 <div className="aspect-square flex items-center justify-center bg-gradient-to-br from-card to-muted">
                   <div className="text-center p-8">
                     <div className="w-32 h-32 mx-auto rounded-full bg-gradient-primary flex items-center justify-center mb-4">
-                      <span className="text-5xl font-heading font-bold text-primary-foreground">TE</span>
+                      <img
+                        src={require("../IMG_9977.JPG")}
+                        alt="Tesnime Ellabou"
+                        className="w-full h-full object-cover rounded-full"
+                      />
                     </div>
-                    <p className="text-muted-foreground text-sm">Professional Portrait</p>
-                    <p className="text-muted-foreground/60 text-xs mt-1">(Add your image here)</p>
+                    <p className="text-muted-foreground text-sm">
+                      Professional Portrait
+                    </p>
                   </div>
                 </div>
               </div>
@@ -88,7 +117,7 @@ export const AboutSection = () => {
               >
                 <Brain className="w-8 h-8 text-primary" />
               </motion.div>
-              
+
               <motion.div
                 className="absolute -bottom-4 -left-4 w-14 h-14 rounded-xl bg-accent/20 backdrop-blur-sm border border-accent/30 flex items-center justify-center"
                 animate={{ y: [0, 10, 0] }}
@@ -117,8 +146,12 @@ export const AboutSection = () => {
                   <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <trait.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-heading font-semibold text-sm mb-1">{trait.label}</h3>
-                  <p className="text-muted-foreground text-xs">{trait.description}</p>
+                  <h3 className="font-heading font-semibold text-sm mb-1">
+                    {trait.label}
+                  </h3>
+                  <p className="text-muted-foreground text-xs">
+                    {trait.description}
+                  </p>
                 </div>
               </div>
             </motion.div>
